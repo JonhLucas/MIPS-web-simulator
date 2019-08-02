@@ -8,6 +8,15 @@ function dragOver(ev)
 }
 function dragDrop(ev)
 {
+    ev.preventDefault();
     var produtoSelecionado = ev.dataTransfer.getData("ID");
-    ev.target.appendChild(document.getElementById(produtoSelecionado));
+    console.log(ev.target);
+    if(ev.target.tagName == "IMG")
+    {
+        ev.target.parentNode.appendChild(document.getElementById(produtoSelecionado));
+    }
+    else
+    {
+        ev.target.appendChild(document.getElementById(produtoSelecionado));
+    }
 }
