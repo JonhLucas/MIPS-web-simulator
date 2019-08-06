@@ -12,13 +12,19 @@
     <article>
         <header>
             <h1>
-                Atributos Globais
+                MIPS Web simulator
             </h1>
         </header>
     </article>
       <form>
         <br>
         <p><h1>Draggable</h1></p>
+        <div>
+            <input type="button" id="run" value="RUN">
+            <input type="button" id="valide" value="DEBUG">
+            <input type="button" id="generate" value="GERAR">
+            <p></p>
+        </div>
         <div id="produtos">
             Lista de instrução
             <img src="add.png" alt="instrução soma"  id="soma" draggable="true" ondragstart="return dragStart(event)">
@@ -31,6 +37,9 @@
         </div>
         <div id="carrinho" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
             Execução
+        </div>
+        <div id="campodeexclusao" ondrop="return dragDrop2(event)" ondragover="return dragOver(event)">
+            <img src="lixeira.png" alt="lixeira" id="lixeira">
         </div>
       </form>
         <br>

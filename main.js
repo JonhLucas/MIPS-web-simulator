@@ -31,4 +31,11 @@ function dragDrop(ev)
         ev.target.appendChild(document.getElementById(produtoSelecionado));
     }
 }
+function dragDrop2(ev)
+{
+    ev.preventDefault();
+    var produtoSelecionado = ev.dataTransfer.getData("ID");
+    console.log("excuir",produtoSelecionado);
+    ev.target.parentNode.removeChild(document.getElementById(produtoSelecionado));
+}
 var contador = 0;

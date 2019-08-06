@@ -13,3 +13,23 @@
     background-color: yellow;
     
 }
+
+#campodeexclusao
+{
+    float: left;
+    width: 350px;
+    height: 350px;
+    background-color: red;
+}
+#campodeexclusao:hover
+{
+    float: left;
+    width: 350px;
+    height: 350px;
+    background-color:blue;
+}
+#lixeira
+{
+    width: 350x;
+    height: 350px;
+}
