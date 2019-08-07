@@ -37,6 +37,7 @@ function dragDrop2(ev)
     var produtoSelecionado = ev.dataTransfer.getData("ID");
     console.log("excuir",produtoSelecionado);
     document.getElementById(produtoSelecionado).remove();
+    ev.target.style.backgroundColor = "green";
 }
 function dragLeave(ev)
 {
@@ -47,7 +48,5 @@ function dragEnter(ev)
 {
     console.log("Entrar");
     ev.target.style.backgroundColor = "red";
-    //var produtoSelecionado = ev.target.id;
-    //console.log(document.getElementById(produtoSelecionado), produtoSelecionado);
 }
 var contador = 0;
