@@ -19,17 +19,12 @@
     float: left;
     width: 350px;
     height: 350px;
-    background-color: red;
-}
-#campodeexclusao:hover
-{
-    float: left;
-    width: 350px;
-    height: 350px;
-    background-color:blue;
+    background-color: green;
+    background-image: url('lixeira.png');
+    background-size: 350px 350px;
 }
 #lixeira
 {
-    width: 350x;
-    height: 350px;
+    width: 200x;
+    height: 200px;
 }

@@ -36,6 +36,18 @@ function dragDrop2(ev)
     ev.preventDefault();
     var produtoSelecionado = ev.dataTransfer.getData("ID");
     console.log("excuir",produtoSelecionado);
-    ev.target.parentNode.removeChild(document.getElementById(produtoSelecionado));
+    document.getElementById(produtoSelecionado).remove();
+}
+function dragLeave(ev)
+{
+    console.log("Saiu");
+    ev.target.style.backgroundColor = "green";
+}
+function dragEnter(ev)
+{
+    console.log("Entrar");
+    ev.target.style.backgroundColor = "red";
+    //var produtoSelecionado = ev.target.id;
+    //console.log(document.getElementById(produtoSelecionado), produtoSelecionado);
 }
 var contador = 0;
