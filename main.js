@@ -1,5 +1,9 @@
+var copiado = null;
 function dragStart2(ev)
 {
+    //alert("hi");
+    console.log("yes", ev.target);
+    copiado = ev.target;
     ev.dataTransfer.setData("ID", ev.target.getAttribute('id'));
 }
 function dragStart(ev)
@@ -8,10 +12,11 @@ function dragStart(ev)
     node.id = node.id + contador;
     contador = contador + 1;
     ev.dataTransfer.setData("ID",  node.id);
-    ev.target.appendChild(node);
-    //console.log(node.ondragstart); 
+    console.log("copiado", ev.target);
+    copiado = node;
+    //console.log(copiado);
+    //ev.target.appendChild(node);
     node.ondragstart = function ondragstart(event){ return dragStart2(event);};
-    //console.log(node.ondragstart);  
 }
 function dragOver(ev)
 {
@@ -21,14 +26,28 @@ function dragDrop(ev)
 {
     ev.preventDefault();
     var produtoSelecionado = ev.dataTransfer.getData("ID");
-    console.log(produtoSelecionado);
+    console.log("dropped", copiado.id, copiado.className, "target", ev.target.tagName);
     if(ev.target.tagName == "IMG")
     {
-        ev.target.parentNode.appendChild(document.getElementById(produtoSelecionado));
+        console.log("implemente", ev.target.parentNode, ev.target.parentNode.nextSibling, ev.target.parentNode.parentNode.className);
+        ev.target.parentNode.parentNode.insertBefore(copiado, ev.target.parentNode.nextSibling);
+        //ev.target.parentNode.nextSibling.insertBefore();
+        //ev.target.parentNode.parentNode.appendChild(copiado);
+    }
+    else if(ev.target.className == "campo")
+    {
+        //var new_node = <div>inter</div>;
+        //console.log("2", copiado, new_node);
+        ev.target.append(copiado);
+        //ev.target.append();
+        //ev.target.appendChild(document.getElementById(produtoSelecionado)); 
     }
     else
     {
-        ev.target.appendChild(document.getElementById(produtoSelecionado));
+        console.log("1", ev.target.parentNode);
+        
+        ev.target.parentNode.appendChild(copiado);
+        //ev.target.parentNode.appendChild(document.getElementById(produtoSelecionado));
     }
 }
 function dragDrop2(ev)

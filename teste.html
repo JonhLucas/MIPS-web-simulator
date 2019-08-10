@@ -26,19 +26,30 @@
             <p></p>
         </div>
         <div id="produtos">
-            Lista de instrução
-            <img src="add.png" alt="instrução soma"  id="soma" draggable="true" ondragstart="return dragStart(event)">
-            <img src="addi.png" alt="instrução soma imediato"  id="somai" draggable="true" ondragstart="return dragStart(event)">
-            <img src="sub.png" alt="instrução subtração"  id="sub" draggable="true" ondragstart="return dragStart(event)">
-            <img src="beq.png" alt="instrução beq"  id="beq" draggable="true" ondragstart="return dragStart(event)">
-            <img src="bne.png" alt="instrução bne"  id="bne" draggable="true" ondragstart="return dragStart(event)">
-            <img src="jr.png" alt="instrução jr"  id="jr" draggable="true" ondragstart="return dragStart(event)">
-
+            <h1>Lista de instrução</h1>
+            <div id="soma" class="instrução" draggable="true" ondragstart="return dragStart(event)">
+                <img src="add.png" alt="instrução soma" draggable="false">
+            </div>
+            <div id="somai"class="instrução" draggable="true" ondragstart="return dragStart(event)">
+                <img src="addi.png" alt="instrução soma imediato" draggable="false">
+            </div>
+            <div class="instrução" id="sub" draggable="true" ondragstart="return dragStart(event)">
+                <img src="sub.png" alt="instrução subtração" draggable="false">
+            </div>
+            <div class="instrução" id="beq" draggable="true" ondragstart="return dragStart(event)">
+                <img src="beq.png" alt="instrução beq" draggable="false">
+            </div>
+            <div class="instrução" id="bne" draggable="true" ondragstart="return dragStart(event)">
+                <img src="bne.png" alt="instrução bne" draggable="false">
+            </div>
+            <div class="instrução" id="jr" draggable="true" ondragstart="return dragStart(event)">
+                <img src="jr.png" alt="instrução jr" draggable="false">
+            </div>
         </div>
-        <div id="carrinho" ondrop="return dragDrop(event)" ondragover="return dragOver(event)" draggable="false">
-            Execução
+        <div id="carrinho" class="campo" ondrop="return dragDrop(event)" ondragover="return dragOver(event)" draggable="false">
+            <h1>Execução</h1>
         </div>
-        <div id="campodeexclusao" ondrop="return dragDrop2(event)" ondragover="return dragOver(event)" ondragleave="return dragLeave(event)" ondragenter="return dragEnter(event)">
+        <div id="campodeexclusao" class="campo" ondrop="return dragDrop2(event)" ondragover="return dragOver(event)" ondragleave="return dragLeave(event)" ondragenter="return dragEnter(event)">
             
         </div>
       </form>
