@@ -35,3 +35,35 @@
     width: 330px;
     height: 60px;
 }
+input[list]
+{
+    background-color: white;
+    color: red;
+    width: 35px;
+}
+div.instrução
+{
+    position: relative;
+}
+div.instrução > input.rd{
+                        position: absolute;
+                        top: 26%;
+                        left: 7%;
+                        color: black;
+                        border-color: transparent;
+                    }
+div.instrução > input.rs{
+                        position: absolute;
+                        top: 26%;
+                        left: 30%;
+                        color: black;
+                        border-color: transparent;
+                    }
+div.instrução > input.rt{
+                        position: absolute;
+                        top: 26%;
+                        left: 54%;
+                        color: black;
+                        border-color: transparent;
+                    }
+                    

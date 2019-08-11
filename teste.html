@@ -28,7 +28,10 @@
         <div id="produtos">
             <h1>Lista de instrução</h1>
             <div id="soma" class="instrução" draggable="true" ondragstart="return dragStart(event)">
-                <img src="add.png" alt="instrução soma" draggable="false">
+                <img src="add.png" alt="instrução soma" draggable="false"> 
+                <input typr="text" list="r" id="en" class="rd">    
+                <input list="r" id="en" class="rs"> 
+                <input list="r" id="en" class="rt">            
             </div>
             <div id="somai"class="instrução" draggable="true" ondragstart="return dragStart(event)">
                 <img src="addi.png" alt="instrução soma imediato" draggable="false">
@@ -54,5 +57,33 @@
         </div>
       </form>
         <br>
+    <datalist id="r" >
+        <option value="$zero" >0</option>
+        <option value="$v0">2</option>
+        <option value="$v1">3</option>
+        <option value="$a0">4</option>
+        <option value="$a1">5</option>
+        <option value="$a2">6</option>
+        <option value="$a3">7</option>
+        <option value="$t0" class="form_entrada">8</option>
+        <option value="$t1">9</option>
+        <option value="$t2">10</option>
+        <option value="$t3">11</option>
+        <option value="$t4">12</option>
+        <option value="$t5">13</option>
+        <option value="$t6">14</option>
+        <option value="$t7">15</option>
+        <option value="$s0">16</option>
+        <option value="$s1">17</option>
+        <option value="$s2">18</option>
+        <option value="$s3">19</option>
+        <option value="$s4">20</option>
+        <option value="$s5">21</option>
+        <option value="$s6">22</option>
+        <option value="$s7">23</option>
+        <option value="$sp">29</option>
+        <option value="$ra">31</option>
+    </datalist> 
+    <datalist id="list"><option value="foo"><option value="bar"></datalist>
 </body>
 </html>
