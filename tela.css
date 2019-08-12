@@ -1,0 +1,76 @@
+ul
+{
+    list-style-type: none;
+    margin: 5px;
+    border-style: solid;
+}
+#gerador, #executor
+{
+    float: left;
+    width: 350px;
+    height: 700px;
+}
+#gerador
+{
+    background-color: red;
+}
+#executor
+{
+    background-color: yellow;
+    
+}
+#campode_exclusao
+{
+    float: left;
+    width: 350px;
+    height: 350px;
+    background-color: green;
+    background-image: url('lixeira.png');
+    background-size: 350px 350px;
+}
+.instrução
+{
+    background-color: transparent;
+    margin-left: 10px;
+    width: 330px;
+    height: 60px;
+}
+input[list]
+{
+    background-color:transparent;
+    color: red;
+    width: 40px;
+}
+li.instrução
+{
+    position: relative;
+}
+li.instrução > input.imediato{
+                            position: absolute;
+                            top: 26%;
+                            left: 54%;
+                            color: black;
+                            border-color: transparent;
+                            width: 70px;
+}
+li.instrução > input.rd{
+                        position: absolute;
+                        top: 26%;
+                        left: 7%;
+                        color: black;
+                        border-color: transparent;
+                    }
+li.instrução > input.rs{
+                        position: absolute;
+                        top: 26%;
+                        left: 30%;
+                        color: black;
+                        border-color: transparent;
+                    }
+li.instrução > input.rt{
+                        position: absolute;
+                        top: 26%;
+                        left: 54%;
+                        color: black;
+                        border-color: transparent;
+                    }
