@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <article>
@@ -25,36 +27,36 @@
             <input type="button" id="generate" value="GERAR">
             <p></p>
         </div>
-        <div id="produtos">
+        <ul id="produtos">
             <h1>Lista de instrução</h1>
-            <div id="soma" class="instrução" draggable="true" ondragstart="return dragStart(event)">
+            <li id="soma" class="instrução" draggable="true" ondragstart="return dragStart(event)">
                 <img src="add.png" alt="instrução soma" draggable="false"> 
                 <input typr="text" list="r" id="en" class="rd">    
                 <input list="r" id="en" class="rs"> 
                 <input list="r" id="en" class="rt">            
-            </div>
-            <div id="somai"class="instrução" draggable="true" ondragstart="return dragStart(event)">
+            </li>
+            <li id="somai"class="instrução" draggable="true" ondragstart="return dragStart(event)">
                 <img src="addi.png" alt="instrução soma imediato" draggable="false">
-            </div>
-            <div class="instrução" id="sub" draggable="true" ondragstart="return dragStart(event)">
+            </li>
+            <li class="instrução" id="sub" draggable="true" ondragstart="return dragStart(event)">
                 <img src="sub.png" alt="instrução subtração" draggable="false">
-            </div>
-            <div class="instrução" id="beq" draggable="true" ondragstart="return dragStart(event)">
+            </li>
+            <li class="instrução" id="beq" draggable="true" ondragstart="return dragStart(event)">
                 <img src="beq.png" alt="instrução beq" draggable="false">
-            </div>
-            <div class="instrução" id="bne" draggable="true" ondragstart="return dragStart(event)">
+            </li>
+            <li class="instrução" id="bne" draggable="true" ondragstart="return dragStart(event)">
                 <img src="bne.png" alt="instrução bne" draggable="false">
-            </div>
-            <div class="instrução" id="jr" draggable="true" ondragstart="return dragStart(event)">
+            </li>
+            <li class="instrução" id="jr" draggable="true" ondragstart="return dragStart(event)">
                 <img src="jr.png" alt="instrução jr" draggable="false">
-            </div>
-        </div>
-        <div id="carrinho" class="campo" ondrop="return dragDrop(event)" ondragover="return dragOver(event)" draggable="false">
+            </li>
+        </ul>
+        <ul id="carrinho" class="campo" ondrop="return dragDrop(event)" ondragover="return dragOver(event)" draggable="false">
             <h1>Execução</h1>
-        </div>
-        <div id="campodeexclusao" class="campo" ondrop="return dragDrop2(event)" ondragover="return dragOver(event)" ondragleave="return dragLeave(event)" ondragenter="return dragEnter(event)">
+        </ul>
+        <ul id="campodeexclusao" class="campo" ondrop="return dragDrop2(event)" ondragover="return dragOver(event)" ondragleave="return dragLeave(event)" ondragenter="return dragEnter(event)">
             
-        </div>
+        </ul>
       </form>
         <br>
     <datalist id="r" >
@@ -84,6 +86,5 @@
         <option value="$sp">29</option>
         <option value="$ra">31</option>
     </datalist> 
-    <datalist id="list"><option value="foo"><option value="bar"></datalist>
 </body>
 </html>

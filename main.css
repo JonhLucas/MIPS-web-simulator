@@ -1,3 +1,7 @@
+ul
+{
+    list-style-type: none;
+}
 #produtos, #carrinho
 {
     float: left;
@@ -13,7 +17,6 @@
     background-color: yellow;
     
 }
-
 #campodeexclusao
 {
     float: left;
@@ -41,25 +44,25 @@ input[list]
     color: red;
     width: 35px;
 }
-div.instrução
+li.instrução
 {
     position: relative;
 }
-div.instrução > input.rd{
+li.instrução > input.rd{
                         position: absolute;
                         top: 26%;
                         left: 7%;
                         color: black;
                         border-color: transparent;
                     }
-div.instrução > input.rs{
+li.instrução > input.rs{
                         position: absolute;
                         top: 26%;
                         left: 30%;
                         color: black;
                         border-color: transparent;
                     }
-div.instrução > input.rt{
+li.instrução > input.rt{
                         position: absolute;
                         top: 26%;
                         left: 54%;
