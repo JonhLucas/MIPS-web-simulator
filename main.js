@@ -13,13 +13,7 @@ function dragStart(ev)
     contador = contador + 1;
     ev.dataTransfer.setData("ID",  node.id);
     copiado = node;
-    //console.log(copiado);
-    //ev.target.appendChild(copiado);
     node.ondragstart = function ondragstart(event){ return dragStart2(event);};
-    //var dragIcon = new Image();
-    //dragIcon.src = "sub.png";
-   //dragIcon.style.opacity = 1;
-    //ev.dataTransfer.setDragImage(dragIcon,0,0);
 }
 function dragOver(ev)
 {

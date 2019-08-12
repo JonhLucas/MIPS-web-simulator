@@ -3,6 +3,7 @@ ul
     list-style-type: none;
     margin: 5px;
     border-style: solid;
+    padding: 10px;
 }
 #gerador, #executor
 {
@@ -39,7 +40,7 @@ input[list]
 {
     background-color:transparent;
     color: red;
-    width: 40px;
+    width: 52px;
 }
 li.instrução
 {
@@ -48,29 +49,29 @@ li.instrução
 li.instrução > input.imediato{
                             position: absolute;
                             top: 26%;
-                            left: 54%;
+                            left: 74%;
                             color: black;
                             border-color: transparent;
-                            width: 70px;
+                            width: 62px;
 }
 li.instrução > input.rd{
                         position: absolute;
                         top: 26%;
-                        left: 7%;
+                        left: 26%;
                         color: black;
                         border-color: transparent;
                     }
 li.instrução > input.rs{
                         position: absolute;
                         top: 26%;
-                        left: 30%;
+                        left: 49%;
                         color: black;
                         border-color: transparent;
                     }
 li.instrução > input.rt{
                         position: absolute;
                         top: 26%;
-                        left: 54%;
+                        left: 74%;
                         color: black;
                         border-color: transparent;
                     }
