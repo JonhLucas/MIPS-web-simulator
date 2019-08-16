@@ -34,7 +34,13 @@ ul
     background-color: transparent;
     margin-left: 10px;
     width: 330px;
-    height: 60px;
+    height: 52px;
+    padding: 3px;
+}
+#gerador > li.instrução
+{
+    height: 52px;
+    padding: 10px;
 }
 input[list]
 {
