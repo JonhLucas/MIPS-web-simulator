@@ -9,8 +9,6 @@ include_once "conexao.php";
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
         <script type="text/javascript" src="main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script>
@@ -69,9 +67,14 @@ include_once "conexao.php";
                 }
                 ?>
             </ul>
-            <ul id="executor">
-                <h1>Execução</h1>
-            </ul>
+            <div class="contanier">
+                <header><strong>Execução</strong></header>
+                <div id="ll">label</div>
+                <ul id="executor">
+                    lista
+                 </ul>
+                <div id = "final">fim</div>
+            </div>
             <ul id="campode_exclusao"> 
                 <h1>Lixeira</h1>
             </ul>
