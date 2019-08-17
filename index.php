@@ -5,26 +5,9 @@ include_once "conexao.php";
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>MIPS WEB - editor</title>
+        <title>MIPS WEB - teste BD</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="tela.css" />
-        <style>
-		ul{
-			padding: 0px;
-			margin: 0px;
-        }
-        #lista{
-            width: 450px;
-        }
-		#lista li{
-			background-color: #1aad72;
-			color: #fff;
-			margin: 0 0 3px;
-			padding: 10px;
-            width: 400px;
-			list-style: none;
-		}
-		</style>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
         <script type="text/javascript" src="main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -51,11 +34,31 @@ include_once "conexao.php";
     </head>
     <body>
         <h1>Simulator</h1>
+        <ul id="registers">
+            <p>Registradores</p>
+            <?php
+                $registers = "SELECT * FROM register";
+                $g_registers = mysqli_query($conn, $registers);
+                while($row = mysqli_fetch_assoc($g_registers))
+                {
+                    ?>
+                    <li id = "<?php echo $row['id']; ?>" class = "register">
+                        <?php
+                            echo $row['id'];
+                        ?>
+                        <?php
+                            echo $row['value'];
+                        ?>
+                    </li>
+                    <?php
+                }
+            ?>
+        </ul>
         <form>
             <ul id="gerador">
                 <h1>Instruções</h1>
                 <?php
-                $result_aulas = "SELECT * FROM instruction";
+                $result_aulas = "SELECT * FROM base";
                 $resultado_aulas = mysqli_query($conn, $result_aulas);
                 while($row_aulas = mysqli_fetch_assoc($resultado_aulas)){
                     ?>
@@ -72,19 +75,6 @@ include_once "conexao.php";
             <ul id="campode_exclusao"> 
                 <h1>Lixeira</h1>
             </ul>
-            <ul id="lista">
-                <?php
-                $result_aulas = "SELECT * FROM instruction";
-                $resultado_aulas = mysqli_query($conn, $result_aulas);
-                while($row_aulas = mysqli_fetch_assoc($resultado_aulas)){
-                    ?>
-                    <li id="arrayordem_<?php echo $row_aulas['id']; ?>">
-                        <img src="<?php echo $row_aulas['img'];?>" alt="soma">
-                    </li>
-                    <?php
-                }
-                ?>
-		    </ul>
         </form>
         <datalist id="r" >
             <option value="$zero" >0</option>
