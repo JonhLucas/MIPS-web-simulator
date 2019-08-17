@@ -52,6 +52,33 @@ li.instrução
 {
     position: relative;
 }
+#register
+{
+    background-color: green;
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+#registers
+{
+    height: 60px;
+    background-color: blue;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+#lista{
+    width: 450px;
+}
+#lista li{
+    background-color: #1aad72;
+    color: #fff;
+    margin: 0 0 3px;
+    padding: 10px;
+    width: 400px;
+    list-style: none;
+}
 li.instrução > input.imediato{
                             position: absolute;
                             top: 26%;
