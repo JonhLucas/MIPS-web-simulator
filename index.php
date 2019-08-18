@@ -62,6 +62,7 @@ include_once "conexao.php";
                     ?>
                     <li id="arrayordem_<?php echo $row_aulas['id']; ?>" class="instrução">
                         <img src="<?php echo $row_aulas['img'];?>" alt="soma">
+                        <input list="r" id="en" class="rs">
                     </li>
                     <?php
                 }
