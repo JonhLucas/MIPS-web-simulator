@@ -6,5 +6,8 @@ plot(Resistores$V, Resistores$X200, xlab = "ddp (V)", ylab = "Corrente (mA)", co
 abline(lm(Resistores$X200 ~ Resistores$V), col="red")
 plot(Resistores$V, Resistores$X2k, xlab = "ddp (V)", ylab = "Corrente (mA)", col="blue", main = "Resistor 2k ohms")
 abline(lm( Resistores$X2k ~ Resistores$V), col="red")
-plot(Resistores$V, Resistores$X560k, xlab = "ddp (V)", ylab = "Corrente (pA)", col="blue", main = "Resistor 560k ohms")
+plot(Resistores$V, Resistores$X560k, xlab = "ddp (V)", ylab = "Corrente (pA)", col="blue", main = "Resistor 560k ohms", xaxt="n", yaxt = "n")
+axis(1, at=seq(from=0, to = 5, by=0.5))
+axis(2, at=seq(from=0, to = 10, by=0.5))
 abline(lm(Resistores$X560k ~ Resistores$V), col="red")
+
